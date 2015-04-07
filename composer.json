@@ -1,0 +1,21 @@
+{
+    "name": "k1low/spy",
+    "description": "Spy",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "spy"],
+    "homepage": "https://github.com/k1LoW/Spy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ken'ichiro Oyama",
+            "homepage": "https://github.com/k1LoW",
+            "role": "Author"
+        }
+    ],
+    "require": {
+        "composer/installers": "*"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "3.7.*"
+	}
+}
