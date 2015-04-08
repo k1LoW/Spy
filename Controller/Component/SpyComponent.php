@@ -57,7 +57,7 @@ class SpyComponent extends Component
         if (empty($this->Controller->Auth->authenticate)) {
             return;
         }
-        $userModel = null;
+        $userModel = 'User';
         foreach (array('all','Form') as $key) {
             if (!empty($this->Controller->Auth->authenticate[$key]['userModel'])) {
                 $userModel = $this->Controller->Auth->authenticate[$key]['userModel'];
