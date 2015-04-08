@@ -29,14 +29,14 @@ class SpyComponent extends Component
      */
     public function spyRequest()
     {
-        $request = [
+        $request = array(
             'method' => env('REQUEST_METHOD'),
             'url' => Router::url( $this->Controller->request->here(true), true ),
             'timestamp' => date('Y-m-d H:i:s'),
-        ];
+        );
         $requests = $this->getData('requests');
         if (empty($requests)) {
-            $requests = [];
+            $requests = array();
         }
         $count = array_unshift($requests, $request);
         while ($count > $this->spyRequestLimit) {
@@ -78,14 +78,14 @@ class SpyComponent extends Component
             return;
         }
 
-        $data = [
+        $data = array(
             'user_id' => $userId,
             'user_model' => $userModel,
             'client_ip' => $this->Controller->request->clientIp(false),
             'referer' => $this->Controller->request->referer(false),
             'user_agent' => env('HTTP_USER_AGENT'),
             'timestamp' => date('Y-m-d H:i:s'),
-        ];
+        );
 
         $SpiedAuthUser = ClassRegistry::init('Spy.SpiedAuthUser');
         $SpiedAuthUser->create();
